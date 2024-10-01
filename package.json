@@ -1,6 +1,6 @@
 {
   "name": "crud",
-  "version": "0.0.0",
+  "version": "15.2-15.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,14 +11,25 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
+    "@angular/cdk": "^13.3.9",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
     "@angular/core": "~13.1.0",
+    "@angular/fire": "^7.5.0",
     "@angular/forms": "~13.1.0",
+    "@angular/material": "^13.3.9",
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.12.3",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "firebase": "^9.21.0",
     "rxjs": "~7.4.0",
+    "speakeasy": "^2.0.0",
+    "styled-components": "^5.3.10",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crud-ad85d": {
+      "hosting": {
+        "crud": [
+          "crud-ad85d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crud-ad85d"
+  }
+}

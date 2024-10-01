@@ -1,0 +1,23 @@
+mat-card{
+    width: 250px;
+    height: 280px;
+    margin-left: 500px;
+    margin-top: 80px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: rgba(218, 227, 227, 0.868);
+}
+button{
+    width: 200px;
+}
+
+.col-7{
+    width: 200px;
+    height: 38px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    background-color: rgba(43, 70, 201, 0.938);
+}

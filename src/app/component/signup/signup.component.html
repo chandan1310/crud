@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Sign Up</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" name="name" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" name="email" [(ngModel)]="email" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" [(ngModel)]="password" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" (click)="signup()">Register</button>
+      
+        <div class="row">
+          <div class="col-7">
+            
+            <a class="text" [routerLink]="['/login']">Login</a>
+          </div>
+        
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,74 @@
+<form #f="ngForm" (ngSubmit)="addData(f)" class="table">
+  <h1>Login Now..</h1>
+  <mat-form-field>
+    <input matInput type="text" name="name" placeholder="Name" [(ngModel)]="name" pattern="[a-zA-Z][a-zA-Z ]+">
+    <mat-hint style="color:red;" *ngIf="f.controls['name'].invalid ">*Name field is required</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="email" name="email" placeholder="Email" [(ngModel)]="email"  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <mat-hint style="color:red;" *ngIf="f.controls['email'].invalid">Email is required (e.g. example@gmail.com)</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="tel" name="number" placeholder="Number" pattern="[0-9]*" [(ngModel)]="number" minlength="10"
+    >
+    <mat-hint style="color:red;" *ngIf="f.controls['number'].invalid"
+    >Please enter a valid number.</mat-hint>
+  </mat-form-field>
+  
+
+  <button mat-raised-button color ="primary" type="submit" *ngIf="!update_Id" [disabled]="!f.valid">
+  Save data
+  </button>
+
+  <button mat-raised-button color="accent" *ngIf="update_Id" type="submit">
+   Update Data
+  </button>
+
+
+  <!-- Authoooo -->
+
+  <div class="row">
+    <a href="" (click)="signInWithGoogle()">
+      <div class="crud">
+        <div class="crud-body">
+          <img src="" alt=""> Sign In With Google
+        </div>
+      </div>
+    </a>
+  </div>
+</form>
+ 
+
+ 
+ 
+ <table class="table1">
+   <thead>
+     <tr class="tr">
+       <!-- <th>ID</th> -->
+       <th>Name</th>
+       <th>Email</th>
+       <th>Number</th>
+       <th id="action">Update_Record</th>
+       <th>Delete_Record</th>
+     
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let data of userData | async">
+       <!-- <td>{{ data.id }}</td> -->
+       <td>{{ data.name }}</td>
+       <td>{{ data.email }}</td>
+       <td>{{ data.number }}</td>
+
+
+       <td><button mat-raised-button color="primary" (click)="updateData(data,'update')">Edit</button></td>
+       <td><button mat-button color color="warn" (click)="deleteData(data.id)">Delete</button></td>
+   
+    </tr>
+       </tbody>
+ 
+ </table>
+
+ 
